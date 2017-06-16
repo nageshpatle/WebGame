@@ -46,7 +46,7 @@
 			position:relative;
 			width:100%;
 			border-collapse: collapse;
-			background: url(headback.png);
+			background: url(headback.PNG);
 			background-repeat: repeat;
 			height:200px;
 		}
@@ -117,20 +117,20 @@
 				var ia;
 
 				if(load[i]==1)
-					ia="patrick.png";
+					ia="patrick.PNG";
 				else if(load[i]==2)
-					ia="sandy.png";
+					ia="sandy.PNG";
 				else if(load[i]==3)
-					ia="spongebob.png";
+					ia="spongebob.PNG";
 				else if(load[i]==4)
-					ia="squidward.png";
+					ia="squidward.PNG";
 				else if(load[i]==5)
-					ia="plankton.png";
+					ia="plankton.PNG";
 				else if(load[i]==6)
-					ia="larry.png";
+					ia="larry.PNG";
 				else if(load[i]==7)
-					ia="snail.png";
-				else ia="krabs.png";
+					ia="snail.PNG";
+				else ia="krabs.PNG";
 
 				document.getElementById(i+1).src=ia;
 				
@@ -148,14 +148,15 @@
 
 
 <div class="container" >
-  <img src="logo.png" class="image">
-  <img src="sfamily.png" class="image" style="float: right;">
+  <img src="run.jpg" class="image" style="float: left;">
+  <img src="logo.PNG" class="image" style="margin:auto;">
+  <img src="sfamily.PNG" class="image" style="float: right;">
 
-  <div class="overlay"><img src="spatrick.png" style="float:left">
+  <div class="overlay"><img src="spatrick.PNG" style="float:left">
     <div class="text">Spongebob Squarepants and Patrick Star live in the fictional city of Britney Bottom with a bunch of lovely friends.All of them live together happily as a family and help each other when in problem.Everything was working fine but one day the arc villain "Flying Duchman" steals their souls and then hides their inactive bodies and souls separately into the mysterious magical cupboard.
 
-    You have a chance to rescue all of them and set them free.Correct match awards you +40,double-click -5 and incorrect match -10. </div>
-    <img src="dutchman.png" style="float:right">
+    You have a chance to rescue all of them and set them free.Read the instructions for further hints.</div>
+    <img src="dutchman.PNG" style="float:right">
   </div>
 </div>
 
@@ -243,7 +244,7 @@
 
 
 <script type="text/javascript">
-	var count=0,iis=undefined,lastx=undefined,lasty=undefined,score=0,click=0;
+	var count=0,iis=undefined,lastx=undefined,lasty=undefined,score=0;
 
 	function check(x,y)
 
@@ -277,9 +278,6 @@
 							lasty=undefined;
 							score=score+40;
 							document.getElementById("score").innerHTML=score;
-							click=click+2;
-							if(click==16)
-								alert("Congrats! You have saved all of them.");
 						}
 						
 						
