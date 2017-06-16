@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Let's play a game!</title>
+	<style type="text/css">
+		table
+		{
+			position: relative;
+			border-collapse: collapse;
+			left:450px;
+			top:45px;
+
+			
+		}
+		tr,td
+		{
+			
+			position: relative;
+			padding: 3px;
+			
+		}
+		td>img
+		{
+			max-width:122px;
+			max-height:143px;
+
+			
+			height:auto;
+			overflow: hidden;
+
+		}
+
+		.show
+		{
+			position: absolute;
+			left:0;
+			top:0;
+			box-shadow: 3px 3px grey;
+			border-radius: 5px;
+			
+			
+		}
+
+		.container
+		{
+			position:relative;
+			width:100%;
+			border-collapse: collapse;
+			background: url(headback.PNG);
+			background-repeat: repeat;
+			height:200px;
+		}
+		
+		.image
+		{
+			
+			position: relative;
+			margin: auto;
+			padding:0px;
+			height: 200px;
+			width:auto;
+		}
+
+		.overlay 
+		{
+ 	        position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: #008CBA;
+            opacity:0.9;
+            overflow: hidden;
+            width: 100%;
+            height:0;
+            transition: .5s ease;
+        }
+        .overlay>img
+        {
+        	max-width: 350px;
+        	height: auto;
+        	vertical-align: "middle";
+
+        }
+
+		.container:hover .overlay {
+ 		    bottom: 0;
+		    height: 100%;
+		}
+
+		.text 
+		{
+		  	width: 500px;
+		  	font-family: "Verdana";
+		  	color: white;
+		  	font-size: 15px;
+		  	position: absolute;
+		  	overflow: hidden;
+		  	top: 50%;
+		  	left: 50%;
+		  	transform: translate(-50%, -50%);
+		  	-ms-transform: translate(-50%, -50%);
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		
+		function allot()
+		{
+			
+			var load = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
+
+			load.sort(function(a, b){return 0.5 - Math.random()}); 
+
+			for(i=0;i<16;i++)
+			{
+				var ia;
+
+				if(load[i]==1)
+					ia="patrick.PNG";
+				else if(load[i]==2)
+					ia="sandy.PNG";
+				else if(load[i]==3)
+					ia="spongebob.PNG";
+				else if(load[i]==4)
+					ia="squidward.PNG";
+				else if(load[i]==5)
+					ia="plankton.PNG";
+				else if(load[i]==6)
+					ia="larry.PNG";
+				else if(load[i]==7)
+					ia="snail.PNG";
+				else ia="krabs.PNG";
+
+				document.getElementById(i+1).src=ia;
+				
+
+
+			}
+		}
+	</script>
+
+
+</head>
+
+
+<body style="background-image:url(back.jpg);background-repeat: no-repeat;background-size: 100vw;" onload="allot()" margin=0;>
+
+
+<div class="container" >
+  <img src="logo.PNG" class="image">
+  <img src="sfamily.PNG" class="image" style="float: right;">
+
+  <div class="overlay"><img src="spatrick.PNG" style="float:left">
+    <div class="text">Spongebob Squarepants and Patrick Star live in the fictional city of Britney Bottom with a bunch of lovely friends.All of them live together happily as a family and help each other when in problem.Everything was working fine but one day the arc villain "Flying Duchman" steals their souls and then hides their inactive bodies and souls separately into the mysterious magical cupboard.
+
+    You have a chance to rescue all of them and set them free.Correct match awards you +40,double-click -5 and incorrect match -10. </div>
+    <img src="dutchman.PNG" style="float:right">
+  </div>
+</div>
+
+
+<p style="position: absolute;font-weight: bold;font-size: 20px;top:350px;font-family: Helvetica;color:green;border:1px solid grey;background-color: white;padding: 5px">Score : <span id="score"> 0 </span></p>
+
+<div >
+<table >
+<tr>
+	<td><img class="show" src="shutter1.jpg" id="101" onclick="check(101,1)">
+	<img class="hide" id="1"  onclick="re(101)"  onmouseout="checkformatch(101,1)"></td>
+	
+
+	<td><img class="show" src="shutter1.jpg" id="102" onclick="check(102,2)">
+	<img class="hide" id="2" onclick="re(102)"  onmouseout="checkformatch(102,2)"></td>
+	
+
+	<td><img class="show" src="shutter1.jpg" id="103" onclick="check(103,3)">
+	<img class="hide" id="3" onclick="re(103)"  onmouseout="checkformatch(103,3)"></td>
+	
+
+	<td><img class="show" src="shutter1.jpg" id="104" onclick="check(104,4)">
+	<img class="hide" id="4"  onclick="re(104)"  onmouseout="checkformatch(104,4)"></td>
+</tr>
+
+	
+<tr>
+	<td><img class="show" src="shutter1.jpg" id="105" onclick="check(105,5)">
+	<img class="hide" id="5"  onclick="re(105)"  onmouseout="checkformatch(105,5)"></td>
+
+
+	<td><img class="show" src="shutter1.jpg" id="106" onclick="check(106,6)">
+	<img class="hide" id="6"  onclick="re(106)"  onmouseout="checkformatch(106,6)"></td>
+
+
+	<td><img class="show" src="shutter1.jpg" id="107" onclick="check(107,7)">
+	<img class="hide" id="7"  onclick="re(107)"  onmouseout="checkformatch(107,7)"></td>
+
+
+	<td><img class="show" src="shutter1.jpg" id="108" onclick="check(108,8)">
+	<img class="hide" id="8"  onclick="re(108)"  onmouseout="checkformatch(108,8)"></td>
+</tr>
+
+
+
+<tr>
+	<td><img class="show" src="shutter1.jpg" id="109" onclick="check(109,9)">
+	<img class="hide" id="9"  onclick="re(109)"  onmouseout="checkformatch(109,9)"></td>
+
+
+	<td><img class="show" src="shutter1.jpg" id="110" onclick="check(110,10)">
+	<img class="hide" id="10"  onclick="re(110)"  onmouseout="checkformatch(110,10)"></td>
+
+
+	<td><img class="show" src="shutter1.jpg" id="111" onclick="check(111,11)">
+	<img class="hide" id="11"  onclick="re(111)"  onmouseout="checkformatch(111,11)"></td>
+
+
+	<td><img class="show" src="shutter1.jpg" id="112" onclick="check(112,12)">
+	<img class="hide" id="12"  onclick="re(112)"  onmouseout="checkformatch(112,12)"></td>
+</tr>
+
+
+
+
+<tr>
+	<td><img class="show" src="shutter1.jpg" id="113" onclick="check(113,13)">
+	<img class="hide" id="13"  onclick="re(113)"  onmouseout="checkformatch(113,13)"></td>
+
+
+	<td><img class="show" src="shutter1.jpg" id="114" onclick="check(114,14)">
+	<img class="hide" id="14"  onclick="re(114)"  onmouseout="checkformatch(114,14)"></td>
+
+
+	<td><img class="show" src="shutter1.jpg" id="115" onclick="check(115,15)">
+	<img class="hide" id="15"  onclick="re(115)"  onmouseout="checkformatch(115,15)"></td>
+
+
+	<td><img class="show" src="shutter1.jpg" id="116" onclick="check(116,16)">
+	<img class="hide" id="16"  onclick="re(116)"  onmouseout="checkformatch(116,16)"></td>
+</tr>
+	
+</table>
+</div>
+
+
+<script type="text/javascript">
+	var count=0,iis=undefined,lastx=undefined,lasty=undefined,score=0,click=0;
+
+	function check(x,y)
+
+			{
+
+				if(lastx!=x)
+				{
+					
+
+					document.getElementById(x).style.visibility="hidden";
+
+					count++;
+					
+
+					if(count%2!=0)
+					{
+						iis=document.getElementById(y).src;
+						lastx=x;
+						lasty=y;
+						document.getElementById("score").innerHTML=score;
+					}
+
+					else
+					{
+
+						if(iis==document.getElementById(y).src)
+						{
+							document.getElementById(y).style.visibility="hidden";
+							document.getElementById(lasty).style.visibility="hidden";
+							lastx=undefined;
+							lasty=undefined;
+							score=score+40;
+							document.getElementById("score").innerHTML=score;
+							click=click+2;
+							if(click==16)
+								alert("Congrats! You have saved all of them.");
+						}
+						
+						
+					}
+
+					
+				}
+
+				
+				
+			}
+
+	
+	function checkformatch(x,y)
+	{
+		if(count%2==0)
+		{
+			document.getElementById(x).style.visibility="visible";
+			document.getElementById(lastx).style.visibility="visible";
+
+			lastx=undefined;
+			lasty=undefined;
+			score=score-10;
+		}
+		document.getElementById(score).innerHTML=score;
+	}
+
+	function re(p)
+	{
+		if(lastx==p&&count%2!=0)
+		{	
+			count++;
+			document.getElementById(p).style.visibility="visible";
+
+			lastx=undefined;
+			lasty=undefined;
+			score=score-5;
+		}
+		document.getElementById(score).innerHTML=score;
+		
+		
+	}
+
+	
+	
+</script>
+
+</body>
+</html>
