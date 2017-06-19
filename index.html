@@ -8,7 +8,7 @@
 			position: relative;
 			border-collapse: collapse;
 			left:450px;
-			top:45px;
+			top:5px;
 
 			
 		}
@@ -148,19 +148,24 @@
 
 
 <div class="container" >
-  <img src="logo.png" class="image">
+  <img src="s2.jpg" class="image" style="float: left;opacity: 0.85">
+  <img src="logo.png" class="image" style="margin:auto;position: relative;left: 150px;">
   <img src="sfamily.png" class="image" style="float: right;">
 
   <div class="overlay"><img src="spatrick.png" style="float:left">
-    <div class="text">Spongebob Squarepants and Patrick Star live in the fictional city of Britney Bottom with a bunch of lovely friends.All of them live together happily as a family and help each other when in problem.Everything was working fine but one day the arc villain "Flying Duchman" steals their souls and then hides their inactive bodies and souls separately into the mysterious magical cupboard.
+    <div class="text"><span style="font-style: italic;">Spongebob Squarepants</span> and <span style="font-style: italic;">Patrick Star</span> live in the fictional city of Britney Bottom with a bunch of lovely friends.All of them live together happily as a family and help each other when in problem.Everything was working fine but one day the arc villain "Flying Duchman" steals their souls and then hides their inactive bodies and souls separately into the mysterious magical cupboard.
 
-    You have a chance to rescue all of them and set them free.Correct match awards you +40,double-click -5 and incorrect match -10. </div>
+    You have a chance to rescue all of them and set them free.A correct match fetches you +100 points,double-click -5 points and an incorrect match -10 points.Go for it!</div>
     <img src="dutchman.png" style="float:right">
   </div>
 </div>
 
 
-<p style="position: absolute;font-weight: bold;font-size: 20px;top:350px;font-family: Helvetica;color:green;border:1px solid grey;background-color: white;padding: 5px">Score : <span id="score"> 0 </span></p>
+<p style="position: absolute;font-weight: bold;font-size: 20px;top:350px;font-family: Helvetica;color:green;border:1px solid grey;background-color: white;padding: 10px;border-radius: 5px;">Score : <span id="score"> 0 </span></p>
+
+
+
+<a href="https://nageshpatle.github.io/save_the_city/" style="position: relative;top:250px;background-color:#b0f442;color:white;text-decoration: none;font-size: 26px;padding: 10px;border-radius: 5px;">Save them again!</a>
 
 <div >
 <table >
@@ -243,7 +248,7 @@
 
 
 <script type="text/javascript">
-	var count=0,iis=undefined,lastx=undefined,lasty=undefined,score=0,click=0;
+	var count=0,iis=undefined,lastx=undefined,lasty=undefined,score=0;
 
 	function check(x,y)
 
@@ -277,9 +282,6 @@
 							lasty=undefined;
 							score=score+40;
 							document.getElementById("score").innerHTML=score;
-							click=click+2;
-							if(click==16)
-								alert("Congrats! You have saved all of them.");
 						}
 						
 						
