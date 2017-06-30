@@ -155,7 +155,7 @@
   <div class="overlay"><img src="spatrick.png" style="float:left">
     <div class="text"><span style="font-style: italic;">Spongebob Squarepants</span> and <span style="font-style: italic;">Patrick Star</span> live in the fictional city of Britney Bottom with a bunch of lovely friends.All of them live together happily as a family and help each other when in problem.Everything was working fine but one day the arc villain "Flying Duchman" steals their souls and then hides their inactive bodies and souls separately into the mysterious magical cupboard.
 
-    You have a chance to rescue all of them and set them free.A correct match fetches you +100 points,double-click -5 points and an incorrect match -10 points.Go for it!</div>
+    You have a chance to rescue all of them and set them free.A correct match fetches you +100 points,double-click -10 points and an incorrect match -30 points.Go for it!</div>
     <img src="dutchman.png" style="float:right">
   </div>
 </div>
@@ -280,7 +280,7 @@
 							document.getElementById(lasty).style.visibility="hidden";
 							lastx=undefined;
 							lasty=undefined;
-							score=score+40;
+							score=score+100;
 							document.getElementById("score").innerHTML=score;
 						}
 						
@@ -304,7 +304,7 @@
 
 			lastx=undefined;
 			lasty=undefined;
-			score=score-10;
+			score=score-30;
 		}
 		document.getElementById(score).innerHTML=score;
 	}
@@ -318,7 +318,7 @@
 
 			lastx=undefined;
 			lasty=undefined;
-			score=score-5;
+			score=score-10;
 		}
 		document.getElementById(score).innerHTML=score;
 		
